@@ -26,8 +26,7 @@ jobs:
 
       - name: deploy to server
         run: |
-          ssh -o StrictHostKeyChecking=no ubuntu@${{ secrets.SERVER_IP }} "mkdir -p ~/iac-repo"
-          scp -o StrictHostKeyChecking=no -r ./* ubuntu@${{ secrets.SERVER_IP }}:~/iac-repo/
+          ssh -o StrictHostKeyChecking=no ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }} "deploy-script.sh"
       
       - name: Setup GitHub OIDC
         run: | 
