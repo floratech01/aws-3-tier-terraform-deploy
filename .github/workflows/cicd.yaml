@@ -18,16 +18,11 @@ jobs:
       - name: Checkout repository.
         uses: actions/checkout@v2
 
-      - name: Copy SSH Key
-        run: |
-          mkdir -p ~/.ssh
-          echo "${{ secrets.SERVER_KEY }}" > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
-          
       - name: Deploy to server
         run: |
-          ssh -o StrictHostKeyChecking=no ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }} "deploy-script.sh"    
-
+          ssh deploy@${{ secrets.SERVER_HOST }} "deploy-script.sh"
+          
+      
       - name: Setup GitHub OIDC
         run: | 
            curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
