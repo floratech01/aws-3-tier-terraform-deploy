@@ -18,15 +18,17 @@ jobs:
       - name: Checkout repository.
         uses: actions/checkout@v2
 
-      - name: copy SSH key
+      - name: Setup SSH
         run: |
           mkdir -p ~/.ssh
-          echo "${{ secrets.SERVER_KEY }}" > ~/.ssh/id_rsa  
-          chmod 600 ~/.ssh/id_rsa
+          echo "${{ secrets.DEPLOY_KEY }}" > deploy_key
+          chmod 600 deploy_key
+          
 
-      - name: deploy to server
+      - name: Deploy to EC2 Instance
         run: |
-          ssh -o StrictHostKeyChecking=no ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }} "deploy-script.sh"
+          ssh -o StrictHostKeyChecking=no ubuntu@${{ secrets.SERVER_HOST }} "echo CONNECTED SUCCESSFULLY"
+          
       
       - name: Setup GitHub OIDC
         run: | 
