@@ -27,7 +27,8 @@ jobs:
 
       - name: Deploy to EC2 Instance
         run: |
-          ssh -o StrictHostKeyChecking=no ubuntu@${{ secrets.SERVER_HOST }} "echo CONNECTED SUCCESSFULLY"
+          ssh -o StrictHostKeyChecking=no -i deploy_key ubuntu@${{ secrets.SERVER_HOST }} "echo CONNECTED SUCCESSFULLY"
+
           
       
       - name: Setup GitHub OIDC
