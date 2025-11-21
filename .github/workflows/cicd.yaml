@@ -18,10 +18,9 @@ jobs:
       - name: Checkout repository.
         uses: actions/checkout@v2
 
-      - name: Deploy to server
+      - name: deploy to server
         run: |
-          ssh deploy@${{ secrets.SERVER_HOST }} "deploy-script.sh"
-          
+          ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null deploy@${{ secrets.SERVER_HOST }} "deploy-script.sh"
       
       - name: Setup GitHub OIDC
         run: | 
