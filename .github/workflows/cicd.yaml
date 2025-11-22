@@ -17,8 +17,10 @@ jobs:
     steps:
       - name: Checkout repository.
         uses: actions/checkout@v2
-        # with:
-        #   token: ${{ secrets.GITHUB_TOKEN }}
+        
+      - name: push changes
+        run: git push https://floratech01:${{ secrets.RUNNER_PAT }}@github.com/floratech01/aws-3-tier-terraform-deploy.git main
+          
 
       # - name: Setup SSH
       #   run: |
