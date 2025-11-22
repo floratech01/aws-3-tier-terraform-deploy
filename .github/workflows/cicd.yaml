@@ -17,17 +17,19 @@ jobs:
     steps:
       - name: Checkout repository.
         uses: actions/checkout@v2
+        # with:
+        #   token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Setup SSH
-        run: |
-          mkdir -p ~/.ssh
-          echo "${{ secrets.DEPLOY_KEY }}" > deploy_key
-          chmod 600 deploy_key
+      # - name: Setup SSH
+      #   run: |
+      #     mkdir -p ~/.ssh
+      #     echo "${{ secrets.DEPLOY_KEY }}" > deploy_key
+      #     chmod 600 deploy_key
           
 
-      - name: Deploy to EC2 Instance
-        run: |
-          ssh -o StrictHostKeyChecking=no -i deploy_key ubuntu@${{ secrets.SERVER_HOST }} "echo CONNECTED SUCCESSFULLY"
+      # - name: Deploy to EC2 Instance
+      #   run: |
+      #     ssh -o StrictHostKeyChecking=no -i deploy_key ubuntu@${{ secrets.SERVER_HOST }} "echo CONNECTED SUCCESSFULLY"
 
           
       
