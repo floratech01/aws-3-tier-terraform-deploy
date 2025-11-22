@@ -94,11 +94,11 @@ variable "namecheap_api_user" {
   type        = string
   default     = "smartobi"
 }
-variable "namecheap_api_key" {
-  description = "Namecheap API key"
-  type        = string
-  default     = "a3ca57241b794d44b0fc3387ca9b62a9"
-}
+# variable "namecheap_api_key" {
+#   description = "Namecheap API key"
+#   type        = string
+#   default     = "a3ca57241b794d44b0fc3387ca9b62a9"
+# }
 variable "namecheap_username" {
   description = "Namecheap username"
   type        = string
