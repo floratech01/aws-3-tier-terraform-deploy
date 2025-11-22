@@ -89,21 +89,21 @@ variable "domain-name" {
   default     = "myapp.example.com"
 }
 
-variable "namecheap_api_user" {
-  description = "Namecheap API user"
-  type        = string
-  default     = "smartobi"
-}
+# variable "namecheap_api_user" {
+#   description = "Namecheap API user"
+#   type        = string
+#   default     = "smartobi"
+# }
 # variable "namecheap_api_key" {
 #   description = "Namecheap API key"
 #   type        = string
 #   default     = "a3ca57241b794d44b0fc3387ca9b62a9"
 # }
-variable "namecheap_username" {
-  description = "Namecheap username"
-  type        = string
-  default     = "smartobi"
-}
+# variable "namecheap_username" {
+#   description = "Namecheap username"
+#   type        = string
+#   default     = "smartobi"
+# }
 # variable "namecheap_client_ip" {
 #   description = "Client IP for Namecheap API access"
 #   type        = string
