@@ -87,6 +87,8 @@ variable "private_subnet_ids" {
   description = "List of private subnet IDs"
 }
 variable "cluster_name" {
+  description = "EKS cluster name"
+  type        = string
 }
 
 variable "repository_name" {
