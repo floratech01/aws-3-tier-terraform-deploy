@@ -12,7 +12,7 @@ spec:
   tls:
   - hosts:
     - argocd.floratech.online 
-    secretName: argocd-soloexpress-online
+    secretName: argocd-floratech-online
   rules:
   - host: argocd.floratech.online 
     http:
