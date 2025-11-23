@@ -7,7 +7,7 @@ metadata:
 spec:
   acme:
     server: https://acme-v02.api.letsencrypt.org/directory
-    email: janyanwu206@gmail.com
+    email: obianujuflorence02@gmail.com
     privateKeySecretRef:
       name: letsencrypt-prod-cluster-issuer
     solvers:
