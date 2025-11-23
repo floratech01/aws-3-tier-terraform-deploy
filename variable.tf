@@ -164,5 +164,5 @@ variable "repository_name" {
 variable "email" {
   description = "Email address for notifications and certificates"
   type        = string
-  default     = "janyanwu206@gmail.com"
+  default     = "obianujuflorence02@gmail.com"
 }
