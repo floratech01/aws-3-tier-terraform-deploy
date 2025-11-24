@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: floratech/edu:v1
+        image: floracloudtech/edu:v1
         ports:
         - containerPort: 80
 ---
@@ -45,10 +45,10 @@ spec:
   ingressClassName: external-nginx
   tls:
   - hosts:
-    - app.floratech.online
-    secretName: app-floratech-online
+    - app.floracloudtech.online
+    secretName: app-floracloudtech-online
   rules:
-  - host: app.floratech.online
+  - host: app.floracloudtech.online
     http:
       paths:
       - path: /
