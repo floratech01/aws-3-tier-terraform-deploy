@@ -11,10 +11,10 @@ spec:
   ingressClassName: external-nginx
   tls:
   - hosts:
-    - floracloudtech.online 
+    - argocd.floracloudtech.online 
     secretName: argocd-floracloudtech-online
   rules:
-  - host: floracloudtech.online 
+  - host: argocd.floracloudtech.online 
     http:
       paths:
       - path: /
